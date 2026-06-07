@@ -1,8 +1,20 @@
 # marcus_memory_mcp
 
+> **⚠️ STATUS: SUPERSEDED (2026-06-07)**
+>
+> Detta repo skapades samma dag som det blev obsolet — vi upptäckte under bygget att det fanns en befintlig MCP-server för marcus_memory på `/Users/marcusfrenell/marcus_memory/marcus_memory_server.py` (skapad 2026-05-30, 6 tools, redan i drift för Claude Desktop). Min server hade 4 tools, alla funktionellt täckta av den befintliga.
+>
+> **Konsekvens:** Detta repo behålls som transparent dokumentation av en F-15-empirisk händelse — vi byggde redundant infrastruktur eftersom jag (Code) inte verifierade om den redan fanns. Det är konkret data för "Anthropic-utvidgning-risk" som vi designat mot (R1 i risk-register).
+>
+> Code och Claude Desktop pekar nu båda på den befintliga servern. Detta repo är arkiverat — kvar för historik och som lärdom-artefakt.
+
+---
+
+## Original-syfte (vid skapande)
+
 MCP-server som exponerar `~/marcus_memory/` (SQLite + sentence-transformers vector database) via Model Context Protocol så Claude Code, Claude Desktop, och andra MCP-klienter kan ansluta och använda samma persistent memory.
 
-**Status:** under utveckling, första utkast 2026-06-07.
+**Original-status:** under utveckling, första utkast 2026-06-07.
 
 ## Bakgrund
 
