@@ -1,0 +1,17 @@
+[project]
+name = "marcus-memory-mcp"
+version = "0.1.0"
+description = "MCP-server för marcus_memory persistent memory"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0",
+    "numpy",
+    "fastembed",
+]
+
+[project.scripts]
+marcus-memory-mcp = "server:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

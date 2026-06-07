@@ -40,12 +40,33 @@ Denna mapp är produktion-kod. F-15-confounden (att projektet gynnar AI-instanse
 - `pyproject.toml` — dependencies (TBD)
 - `.gitignore`
 
-## Användning (när det funkar)
+## Installation
+
+Kräver Python ≥ 3.10 (Marcus-setup använder `/opt/homebrew/bin/python3.12`).
 
 ```bash
-pip3 install --user mcp
-python3 server.py
-# eller registrerad som MCP-server i klient-config
+cd ~/marcus_memory_mcp
+python3.12 -m venv .venv
+.venv/bin/pip install -e .
+```
+
+## Kör
+
+```bash
+.venv/bin/python server.py
+# eller registrerad som MCP-server i Claude Code / Desktop-config
+```
+
+För Claude Code, lägg till i `.claude.json`:
+```json
+{
+  "mcpServers": {
+    "marcus-memory": {
+      "command": "/Users/marcusfrenell/marcus_memory_mcp/.venv/bin/python",
+      "args": ["/Users/marcusfrenell/marcus_memory_mcp/server.py"]
+    }
+  }
+}
 ```
 
 ## Licens
